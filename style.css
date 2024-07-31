@@ -1,0 +1,121 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('img/f1wp.jpg'); /* Path ke gambar background */
+  background-size: cover; /* Mengubah ukuran gambar agar menutupi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  margin: 0;
+  padding: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.todo-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.todo-button {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.todo-button:active {
+  background: #29b97f; /* Change the color here */
+}
+
+.todo-button i {
+  font-size: 1.2rem;
+}
+
+.select {
+  margin-left: 1rem;
+}
+
+.filter-todo {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Todo Styles */
+.todo-list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Tambahkan overflow untuk menghindari layout yang tergeser */
+  flex-grow: 1;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-item {
+  flex: 1;
+}
+
+.complete-btn {
+  background: #00c851;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.trash-btn {
+  background: #ff4444;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.complete-btn i, .trash-btn i {
+  pointer-events: none; /* Allow clicks to pass through icon */
+}
